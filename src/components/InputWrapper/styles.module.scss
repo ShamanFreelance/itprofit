@@ -1,0 +1,65 @@
+@import "../../styles/color.module";
+@import "../../styles/text.module";
+@import "../../styles/shadow.module";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  & + & {
+    margin-top: 5px;
+  }
+
+  .label {
+    @include small-text;
+
+    padding: 5px;
+    color: $primary;
+
+    &__warning {
+      color: $warning-primary;
+    }
+
+    &__error {
+      color: $error-primary;
+    }
+  }
+
+  .input {
+    @include default-text;
+    @include shadow;
+
+    padding: 8px;
+
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: $primary;
+    border-style: solid;
+
+    background-color: $quaternary;
+
+    &__warning {
+      border-color: $warning-primary;
+      background-color: $warning-secondary;
+    }
+
+    &__error {
+      border-color: $error-primary;
+      background-color: $error-secondary;
+    }
+  }
+
+  .message {
+    @include small-text;
+
+    padding: 5px;
+
+    &__warning {
+      color: $warning-primary;
+    }
+
+    &__error {
+      color: $error-primary;
+    }
+  }
+}
