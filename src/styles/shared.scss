@@ -1,0 +1,8 @@
+@import "./color.module";
+
+*::selection {
+  @include selectionColor(0.5);
+}
+* {
+  font-family: monospace !important;
+}

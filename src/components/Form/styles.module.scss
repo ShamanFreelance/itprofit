@@ -1,0 +1,84 @@
+@import "../../styles/color.module";
+@import "../../styles/text.module";
+@import "../../styles/shadow.module";
+
+.container {
+  @include shadow;
+
+  background-color: $tertiary;
+  width: 300px;
+  padding: 30px;
+
+  border-radius: 10px;
+
+  .title {
+    @include big-text;
+
+    color: $primary;
+
+    display: flex;
+    justify-content: center;
+
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+  }
+
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+
+    .btn {
+      @include shadow;
+
+      &:hover {
+        background-color: $secondary;
+        color: $quaternary;
+        cursor: pointer;
+      }
+
+      border-width: 1px;
+      border-style: solid;
+      border-color: $primary;
+      background-color: $quaternary;
+
+      border-radius: 10px;
+      width: 50%;
+      padding: 10px;
+
+      &__disabled {
+        border-color: $disabled-primary;
+        background-color: $disabled-secondary;
+        color: $disabled-primary;
+
+        &:hover {
+          border-color: $disabled-primary;
+          background-color: $disabled-secondary;
+          color: $disabled-primary;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .message {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+
+    @include small-text;
+    @include shadow;
+
+    &__error {
+      color: $error-primary;
+      background-color: $error-secondary;
+    }
+
+    &__success {
+      color: $success-primary;
+      background-color: $success-secondary;
+    }
+  }
+}
