@@ -1,0 +1,14 @@
+@mixin default-text {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif, cursive;
+}
+
+@mixin big-text {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif, cursive;
+}
+
+@mixin small-text {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif, cursive;
+}

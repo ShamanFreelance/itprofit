@@ -1,0 +1,16 @@
+$primary: #007bff;  
+$secondary: #6c757d;  
+$tertiary: #d5f0f8;  
+$quaternary: white;  
+$error-primary: #dc3545;  
+$error-secondary: #ffe2e5;  
+$disabled-primary: #a4a49f;  
+$disabled-secondary: #ebebe4;  
+$success-primary: #28a745;  
+$success-secondary: #dcffe4;  
+$warning-primary: #ffc107;  
+$warning-secondary: #fff8e1;  
+
+@mixin selectionColor($opacity) {
+  background-color: rgba(213, 240, 248, 0.5) !important;
+}
